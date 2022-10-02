@@ -1,0 +1,25 @@
+//Calculate XOR from 1 to n.
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int computeXOR(int n){
+    //Base Case
+    if(n==0){
+        return 0;
+    }
+    int UNI = 0;
+    for(int i=1;i<=n;i++){
+        UNI = UNI ^ i;
+    }
+    return UNI;
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    int result = computeXOR(n);
+    cout<<result<<endl;
+    return 0;
+}
